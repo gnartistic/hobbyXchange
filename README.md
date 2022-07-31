@@ -1,5 +1,3 @@
-# HobbieExchange
-
 # Project 02 Requirements
 
 The group project must meet the following requirements:
