@@ -1,0 +1,36 @@
+{
+  "name": "hobbieexchange",
+  "version": "1.0.0",
+  "description": "UTSAbootcampProject2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnartistic/HobbieExchange.git"
+  }, 
+   "keywords": [],
+  "author": "Charlie Houston, Yussel Panecatl, and David Barnes",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "bugs": {
+    "url": "https://github.com/gnartistic/HobbieExchange/issues"
+  },
+  "homepage": "https://github.com/gnartistic/HobbieExchange#readme"
+}
