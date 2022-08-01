@@ -57,6 +57,6 @@ const listingData = [
     },
 ];
 
-const seedProducts = () => Product.bulkCreate( productData );
+const seedListings = () => Listing.bulkCreate( listingData );
 
-module.exports = seedProducts;
+module.exports = seedListings;
