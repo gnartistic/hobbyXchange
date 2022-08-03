@@ -1,24 +1,31 @@
-const Category = require('./Category');
-const User = require('./User');
-const Tags = require('./Tags');
-const Listing = require('./Listing');
-const ListingTags = require('./ListingTags');
+// import all models
+const Listing = require( './Listing' );
+const User = require( './User' );
+const Category = require( './Category' );
+const Tags = require( './Tags' );
+const ListingTag = require( './Listing-tags' );
 
-// Associations
-Listing.belongTo(Category, {
-    foreignKey: 'category_id'
-});
+// create associations
+User.hasMany( Listing, {
+    foreignKey: 'user_id'
+} );
 
-Category.hasMany(Listing, {
-    foreignKey: 'category_id'
-});
+Listing.belongsTo( User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+} );
 
-Listing.belongsToMany(Tags, {
-    through: ListingTags,
-    foreignKey: 'listing_id'
-});
+Category.hasMany( Listing, {
+    foreignKey: 'category_id',
+    onDelete: 'CASCADE'
+} );
 
-Tags.belongsToMany(Listing, {
-    through: ListingTags,
-    foreignKey: 'tag_id'
-});
+Listing.belongsToMany( Tags, {
+    through: ListingTag
+} );
+
+Tags.belongsToMany( Listing, {
+    through: ListingTag
+} );
+
+module.exports = { User, Listing, Category, ListingTag, Tags };
