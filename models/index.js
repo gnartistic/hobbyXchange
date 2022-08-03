@@ -3,7 +3,7 @@ const Listing = require( './Listing' );
 const User = require( './User' );
 const Category = require( './Category' );
 const Tags = require( './Tags' );
-const ListingTag = require( './Listing-tags' );
+const ListingTag = require( './ListingTags' );
 
 // create associations
 User.hasMany( Listing, {
