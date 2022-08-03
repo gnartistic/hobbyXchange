@@ -1,0 +1,32 @@
+
+
+.hero.is-light .tabs.is-boxed li.is-active a,
+.hero.is-light .tabs.is-boxed li.is-active a:hover,
+.hero.is-light .tabs.is-toggle li.is-active a,
+.hero.is-light .tabs.is-toggle li.is-active a:hover {
+    background-color: #677884 !important;
+    border: none !important;
+}
+
+.color1 {
+    background-color: #2C3C46 !important;
+}
+a.topNav {
+    color: #f5f5f5 !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+section.Listings {
+    background-color: #677884 !important;
+    color: #f5f5f5;
+}
+
+.notification {
+    background-color:#2C3C46 !important;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap !important;
+}
