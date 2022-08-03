@@ -14,13 +14,13 @@ const categoryData = [
         category_name: 'Music',
     },
     {
-        category_name: 'Construction',
+        category_name: 'Woodworking',
     },
     {
         category_name: 'Books',
     },
     {
-        category_name: 'Outdoor Activities',
+        category_name: 'Outdoor',
     },
     {
         category_name:'Miscellaneous'
