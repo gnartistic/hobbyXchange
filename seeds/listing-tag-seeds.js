@@ -46,7 +46,7 @@ const listingTagData = [
         tag_id: 6,
     },
     {
-        lisrting_id: 7,
+        listing_id: 7,
         tag_id: 7,
     },
     {
