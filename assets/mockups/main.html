@@ -61,6 +61,9 @@
         </div>
     </section>
     <section class="Listings p-5">
+        <button class="button"></button>
+    </section>
+    <section class="Listings p-5">
         <div class="tile is-ancestor flex">
             <div class="tile is-3 is-parent">
                 <a class="tile is-child notification" href="/assets/mockups/listing.html">
@@ -90,13 +93,13 @@
                 </a>
             </div>
             <div class="tile is-3 is-parent">
-            <a class="tile is-child notification">
-                <p class="title">Listing Example</p>
-                <p class="subtitle">Title</p>
-                <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-            </a>
+                <a class="tile is-child notification">
+                    <p class="title">Listing Example</p>
+                    <p class="subtitle">Title</p>
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/640x480.png">
+                    </figure>
+                </a>
             </div>
             <div class="tile is-3 is-parent">
                 <a class="tile is-child notification">
@@ -136,6 +139,40 @@
             </div>
         </div>
     </section>
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+    
+        <div class="modal-content">
+            <div class="box">
+                <p>Modal JS example</p>
+                <form>
+                    <div class="tile is-6 justify-content-between">
+                        <h2 class="title pb-5">Create User Example</h2>
+                    </div>
+                    <div class="tile is-vertical">
+                        <h3 class="subtitle">Name</h3>
+                        <input class="mb-5" placeholder="ex: John Parker"></input>
+                        <h3 class="subtitle">Username</h3>
+                        <input class="mb-5" placeholder="ex: coolUsername"></input>
+                        <h3 class="subtitle">Email</h3>
+                        <input class="mb-5" placeholder="ex: yourEmail@example.com"></input>
+                        <h3 class="subtitle mt-5">Password</h3>
+                        <h5 class="mb-3">* must be at least 6 characters long</h5>
+                        <input class="mb-5" placeholder="********"></input>
+                        <h3 class="subtitle pt-5">Wish List</h3>
+                        <textarea class="textarea mb-5 is-warning"
+                            placeholder="ex: Skateboard, Cook Books, Knitting Supplies"></textarea>
+                        <div class="tile pt-5 is-6">
+                            <button class="button" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <script src="/public/js/new-user.js"></script>
     <script src="https://kit.fontawesome.com/2a0f064e00.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
