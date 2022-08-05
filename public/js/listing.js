@@ -1,14 +1,15 @@
 // modal
-const ListingBtn = document.querySelector( '#listing' );
-const modalBg = document.querySelector( '.modal-background' );
+const listingBtn = document.querySelector( '.listing' );
 const listingModal = document.querySelector( '.listingModal' );
 
-signupBtn.addEventListener( 'click', () =>
+const modalBgListing = document.querySelector( '#modalBgListing' );
+
+listingBtn.addEventListener( 'click', () =>
 {
     listingModal.classList.add( 'is-active' );
 } );
 
-modalBg.addEventListener( 'click', () =>
+modalBgListing.addEventListener( 'click', () =>
 {
     listingModal.classList.remove( 'is-active' );
 } );
