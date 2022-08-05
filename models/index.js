@@ -2,8 +2,8 @@
 const Listing = require( './Listing' );
 const User = require( './User' );
 const Category = require( './Category' );
-const Tags = require( './Tags' );
-const ListingTag = require( './ListingTags' );
+// const Tags = require( './Tags' );
+// const ListingTag = require( './ListingTags' );
 
 // create associations
 User.hasMany( Listing, {
@@ -20,12 +20,12 @@ Category.hasMany( Listing, {
     onDelete: 'CASCADE'
 } );
 
-Listing.belongsToMany( Tags, {
-    through: ListingTag
-} );
+// Listing.belongsToMany( Tags, {
+//     through: ListingTag
+// } );
 
-Tags.belongsToMany( Listing, {
-    through: ListingTag
-} );
+// Tags.belongsToMany( Listing, {
+//     through: ListingTag
+// } );
 
-module.exports = { User, Listing, Category, ListingTag, Tags };
+module.exports = { User, Listing, Category };

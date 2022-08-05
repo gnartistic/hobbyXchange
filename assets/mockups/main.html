@@ -16,7 +16,13 @@
         <div class="tile justify-content-between pl-5 pr-5">
             <ul class="tile level is-family-monospace">
                 <li>
-                    <a class="topNav is-size-3" href="/assets/mockups/sign-up.html">Sign up</a>
+                        <!--SIGNUP MODAL-->
+                        
+                        <div class="js-modal-trigger" data-target="signUpModal">
+                            <button id="signup" class="button is-medium">
+                                <h3 class="has-text-weight-bold">Sign up!</h3>
+                            </button>
+                        </div>
                 </li>
             </ul>
             <ul>
@@ -53,16 +59,15 @@
                             <a href="/assets/mockups/catergories.html">Categories</a>
                         </li>
                         <li>
-                            <a href="/assets/mockups/create-listing.html">Create Listing</a>
+                            <a href="/assets/mockups/create-listing.html">Your Listings</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
-    <section class="Listings p-5">
-        <button class="button"></button>
-    </section>
+
+    <!--LISTINGS DISPLAYED-->
     <section class="Listings p-5">
         <div class="tile is-ancestor flex">
             <div class="tile is-3 is-parent">
@@ -139,38 +144,52 @@
             </div>
         </div>
     </section>
-    <div id="modal-js-example" class="modal">
+    <!-- MODAL CONTENTS -->
+
+    <!--signup-->
+    <div class="signUpModal modal is-clipped">
         <div class="modal-background"></div>
-    
-        <div class="modal-content">
-            <div class="box">
-                <p>Modal JS example</p>
-                <form>
-                    <div class="tile is-6 justify-content-between">
-                        <h2 class="title pb-5">Create User Example</h2>
+        <div class="modal-content has-background-light py-5 px-5">
+            <form>
+                <div class="field">
+                    <label for="" class="label">
+                        Name
+                    </label>
+                    <div class="control">
+                        <input class="" placeholder="John Parker">
                     </div>
-                    <div class="tile is-vertical">
-                        <h3 class="subtitle">Name</h3>
-                        <input class="mb-5" placeholder="ex: John Parker"></input>
-                        <h3 class="subtitle">Username</h3>
-                        <input class="mb-5" placeholder="ex: coolUsername"></input>
-                        <h3 class="subtitle">Email</h3>
-                        <input class="mb-5" placeholder="ex: yourEmail@example.com"></input>
-                        <h3 class="subtitle mt-5">Password</h3>
-                        <h5 class="mb-3">* must be at least 6 characters long</h5>
-                        <input class="mb-5" placeholder="********"></input>
-                        <h3 class="subtitle pt-5">Wish List</h3>
-                        <textarea class="textarea mb-5 is-warning"
-                            placeholder="ex: Skateboard, Cook Books, Knitting Supplies"></textarea>
-                        <div class="tile pt-5 is-6">
-                            <button class="button" type="submit">Submit</button>
-                        </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Username</label>
+                    <div class="control">
+                        <input class="" placeholder="coolUsername">
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Email</label>
+                    <div class="control">
+                        <input class="" placeholder="email@example.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Password</label>
+                    <div class="control">
+                        <input class="" placeholder="********"></input>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Wish List</label>
+                    <div class="control">
+                        <textarea name="" id="" cols="30" rows="5" placeholder=" Skateboard, Cook Books, Knitting Supplies"></textarea>
+                    </div>
+                </div>
+                <div class="mt-6 has-test centered">
+                    <button class="button" id="formSubmit" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-    
-        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <button id="modalClose" class="modal-close is-large" aria-label="close"></button>
     </div>
     <script src="/public/js/new-user.js"></script>
     <script src="https://kit.fontawesome.com/2a0f064e00.js" crossorigin="anonymous"></script>
