@@ -6,7 +6,7 @@ const categoryRoutes = require( './category-routes' );
 const tagRoutes = require( './tag-routes' );
 
 
-router.use( 'users', userRoutes );
+router.use( '/users', userRoutes );
 router.use( '/listings', listingRoutes );
 router.use( '/categories', categoryRoutes );
 router.use( '/tags', tagRoutes );
