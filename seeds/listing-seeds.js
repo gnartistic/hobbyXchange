@@ -8,7 +8,7 @@ const listingData = [
         category_id: 1,
     },
     {
-        title: 'Palm sand and Circular Saw',
+        title: 'Palm sander and Circular Saw',
         description: 'I used these to build my wife a new shelf in her craft room. It honestly looks like crap. Looking for a new hobby.',
         user_id: 3,
         category_id: 5,
@@ -21,7 +21,7 @@ const listingData = [
     },
     {
         title: 'Oculus Quest 2',
-        description: 'This is my oculus quest 2, i bought it thinking id get into VR gaming, but tbh it gives me motion sickness.',
+        description: "This is my oculus quest 2, i bought it thinking I'd get into VR gaming, but tbh it gives me motion sickness.",
         user_id: 10,
         category_id: 9,
     },
