@@ -64,18 +64,19 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/:id', (req, res) => {
-    Listing.create({
-        title: req.body.title,
-        description: req.body.description,
-        user_id: req.session.user_id,
-        category_id: req.body.category_id
-    })
-    .then(dbListingData => res.json(dbListingData))
-    .catch(err => {
-        console.log(err);
-        res.status(400).json(err);
-    });
+router.post('/', (req, res) => {
+        Listing.create({
+            title: req.body.title,
+            description: req.body.description,
+            // change back to session instead of body once path confirmed working
+            user_id: req.body.user_id,
+            category_id: req.body.category_id
+        })
+        .then(dbListingData => res.json(dbListingData))
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });    
 });
 
 router.put('/:id', (req, res) => {

@@ -20,6 +20,11 @@ Category.hasMany( Listing, {
     onDelete: 'CASCADE'
 } );
 
+Listing.belongsTo( Category, {
+    foreignKey: 'category_id',
+    onDelete: 'SET NULL'
+} );
+
 // Listing.belongsToMany( Tags, {
 //     through: ListingTag
 // } );

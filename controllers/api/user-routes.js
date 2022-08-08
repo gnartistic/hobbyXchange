@@ -3,8 +3,8 @@ const { User, Listing} = require( '../../models' );
 
 router.get('/', (req, res) => {
     User.findAll({
+        attributes: {exclude: ['password']},
         attributes: [
-            {exclude: ['password']},
             'id',
             'username',
             'email',
@@ -30,8 +30,8 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
+        attributes: {exclude: ['password']},
         attributes: [
-            {exclude: ['password']},
             'id',
             'username',
             'email',
