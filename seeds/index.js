@@ -1,8 +1,8 @@
 const seedUsers = require( './user-seeds' );
 const seedCategories = require( './category-seeds' );
 const seedListings = require( './listing-seeds' );
-const seedTags = require( './tag-seeds' );
-const seedListingTags = require( './listing-tag-seeds' );
+// const seedTags = require( './tag-seeds' );
+// const seedListingTags = require( './listing-tag-seeds' );
 
 const sequelize = require( '../config/connection' );
 
@@ -19,11 +19,11 @@ const seedAll = async () =>
     await seedListings();
     console.log( '\n----- LISTINGS SEEDED -----\n' );
 
-    await seedTags();
-    console.log( '\n----- TAGS SEEDED -----\n' );
+    // await seedTags();
+    // console.log( '\n----- TAGS SEEDED -----\n' );
 
-    await seedListingTags();
-    console.log( '\n----- LISTING TAGS SEEDED -----\n' );
+    // await seedListingTags();
+    // console.log( '\n----- LISTING TAGS SEEDED -----\n' );
 
     process.exit( 0 );
 };
