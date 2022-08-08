@@ -16,7 +16,13 @@
         <div class="tile justify-content-between pl-5 pr-5">
             <ul class="tile level is-family-monospace">
                 <li>
-                    <a class="topNav is-size-3" href="/assets/mockups/sign-up.html">Sign up</a>
+                    <!--SIGNUP MODAL-->
+
+                    <div class="js-modal-trigger" data-target="signUpModal">
+                        <button id="signUp" class="button is-medium">
+                            <h3 class="has-text-weight-bold">Sign up!</h3>
+                        </button>
+                    </div>
                 </li>
             </ul>
             <ul>
@@ -47,95 +53,141 @@
                             <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="/assets/mockups/search.html">Search</a>
-                        </li>
-                        <li>
                             <a href="/assets/mockups/catergories.html">Categories</a>
                         </li>
                         <li>
-                            <a href="/assets/mockups/create-listing.html">Create Listing</a>
+                            <a href="/assets/mockups/create-listing.html">Your Listings</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
-    <section class="Listings p-5">
-        <div class="tile is-ancestor flex">
-            <div class="tile is-3 is-parent">
-                <a class="tile is-child notification" href="/assets/mockups/listing.html">
+
+    <!--LISTINGS DISPLAYED-->
+    <section class="Listings level p-5">
+        <div class="tile listing flex">
+            <div class="js-modal-trigger" data-target="listingModal">
+                <div id="listing" class="tile is-child notification">
                     <p class="title">Listing Example</p>
-                    <p class="subtitle">Title</p>
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                </a>
+                    <p class="subtitle">(date created_at)</p>
+                    <p class="subtitle">Tag</p>
+                    <p class="subtitle">Username</p>
+                </div>
             </div>
-            <div class="tile is-3 is-parent">
-                <a class="tile is-child notification" href="/assets/mockups/listing.html">
+        </div>
+        <div class="tile listing flex">
+            <div class="js-modal-trigger" data-target="listingModal">
+                <div id="listing" class="tile is-child notification">
                     <p class="title">Listing Example</p>
-                    <p class="subtitle">Title</p>
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                </a>
+                    <p class="subtitle">(date created_at)</p>
+                    <p class="subtitle">Tag</p>
+                    <p class="subtitle">Username</p>
+                </div>
             </div>
-            <div class="tile is-3 is-parent">
-                <a class="tile is-child notification" href="/assets/mockups/listing.html">
+        </div>
+        <div class="tile listing flex">
+            <div class="js-modal-trigger" data-target="listingModal">
+                <div id="listing" class="tile is-child notification">
                     <p class="title">Listing Example</p>
-                    <p class="subtitle">Title</p>
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                </a>
+                    <p class="subtitle">(date created_at)</p>
+                    <p class="subtitle">Tag</p>
+                    <p class="subtitle">Username</p>
+                </div>
             </div>
-            <div class="tile is-3 is-parent">
-            <a class="tile is-child notification">
-                <p class="title">Listing Example</p>
-                <p class="subtitle">Title</p>
-                <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-            </a>
-            </div>
-            <div class="tile is-3 is-parent">
-                <a class="tile is-child notification">
+        </div>
+        <div class="tile listing flex">
+            <div class="js-modal-trigger" data-target="listingModal">
+                <div id="listing" class="tile is-child notification">
                     <p class="title">Listing Example</p>
-                    <p class="subtitle">Title</p>
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                </a>
-            </div>
-            <div class="tile is-3 is-parent">
-                <a class="tile is-child notification">
-                    <p class="title">Listing Example</p>
-                    <p class="subtitle">Title</p>
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                </a>
-            </div>
-            <div class="tile is-3 is-parent">
-                <a class="tile is-child notification">
-                    <p class="title">Listing Example</p>
-                    <p class="subtitle">Title</p>
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                </a>
-            </div>
-            <div class="tile is-3 is-parent">
-                <a class="tile is-child notification">
-                    <p class="title">Listing Example</p>
-                    <p class="subtitle">Title</p>
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                </a>
+                    <p class="subtitle">(date created_at)</p>
+                    <p class="subtitle">Tag</p>
+                    <p class="subtitle">Username</p>
+                </div>
             </div>
         </div>
     </section>
+    <!-- MODAL CONTENTS -->
+
+    <!--signup-->
+    <div class="signUpModal modal is-clipped">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-light py-5 px-5">
+            <div class="tile">
+                <form>
+                    <div class="field">
+                        <label for="" class="label">
+                            Name
+                        </label>
+                        <div class="control">
+                            <input class="" placeholder="John Parker">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Username</label>
+                        <div class="control">
+                            <input class="" placeholder="coolUsername">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Email</label>
+                        <div class="control">
+                            <input class="" placeholder="email@example.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Password</label>
+                        <div class="control">
+                            <input class="" placeholder="********"></input>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Wish List</label>
+                        <div class="control">
+                            <textarea name="" id="" cols="30" rows="2"
+                                placeholder=" Skateboard, Cook Books, Knitting Supplies"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-6 has-test centered">
+                        <button class="button" id="formSubmit" type="submit">Submit</button>
+                    </div>
+                </form>
+                <div class="mt-5 pt-5">
+                    <img src="/assets/images/banner2.png">
+                    <!-- <img src="/assets/images/My project-1 (1).png"> -->
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    <button id="modalClose" class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- listing -->
+
+    <div class="listingModal modal is-clipped">
+        <div id="modalBgListing" class="modal-background"></div>
+        <div class="modal-content has-background-light py-5 px-5">
+            <div>
+                <h2 class="title">Listing Example</h2>
+
+                <button class="button" type="submit">Send Offer</button>
+            </div>
+            <div class="mt-5">
+                <h3 class="subtitle">Title</h3>
+                <p class="p-1 mb-2">Here's the thing, we started out friends. It was cool, but it was all pretend.
+                    Yeah, yeah. Since you been gone. You're dedicated, you took the time. Wasn't long 'til I called
+                    you mine. Yeah, yeah. Since you been gone. And all you'd ever hear me say. Is how I picture me
+                    with you. That's all you'd ever hear me say. But since you been gone. I can breathe for the
+                    first time. I'm so moving on. yeah, yeah.
+                    Thanks to you now I get what I want. Since you been gone.</p>
+                <h3 class="button subtitle">Username</h3>
+                <h3 class="button subtitle">Category</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/js/new-user.js"></script>
     <script src="https://kit.fontawesome.com/2a0f064e00.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
