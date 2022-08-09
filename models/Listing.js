@@ -30,9 +30,11 @@ Listing.init(
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
+        createdAt: 'listing_date',
+        updatedAt: 'updated_at',
         modelName: 'listings',
     }
 );
