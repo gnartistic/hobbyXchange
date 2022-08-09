@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Listing,
-                    attributes: ['id', 'title', 'description', 'user_id']
+                    attributes: ['id', 'title', 'description', 'user_id', 'category_id', 'listing_date', 'updated_at']
             }
         ]
     })
@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Listing,
-                    attributes: ['id', 'title', 'description', 'user_id']
+                    attributes: ['id', 'title', 'description', 'user_id', 'category_id', 'listing_date', 'updated_at']
             }
         ] 
     })

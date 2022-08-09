@@ -1,6 +1,6 @@
 const router = require( 'express' ).Router();
 const sequelize = require( '../config/connection' );
-const { Listing, User, Category, Tags } = require( '../models' );
+const { Listing, User, Category } = require( '../models' );
 
 // get all Listings for homepage
 router.get( '/', ( req, res ) =>
@@ -11,21 +11,24 @@ router.get( '/', ( req, res ) =>
             'id',
             'title',
             'description',
-            'created_at'
+            'user_id',
+            'category_id',
+            'listing_date',
+            'updated_at'
         ],
         include: [
             {
                 model: User,
-                attributes: [ 'username' ]
+                attributes: [ 'username', 'name']
             },
             {
                 model: Category,
                 attributes: [ 'category_name' ]
             },
-            {
-                model: Tags,
-                attributes: ['tag_name']
-            }
+            // {
+            //     model: Tags,
+            //     attributes: ['tag_name']
+            // }
         ]
     } )
         .then( dbListingData =>
@@ -55,18 +58,25 @@ router.get( '/listing/:id', ( req, res ) =>
             'id',
             'title',
             'description',
-            'created_at',
+            'user_id',
+            'category_id',
+            'listing_date',
+            'updated_at',
             [ sequelize.literal( '(SELECT COUNT(*) FROM user WHERE listing_id = listing.id)' ), 'posted_by' ]
         ],
         include: [
             {
+                model: User,
+                attributes: [ 'username', 'name']
+            },
+            {
                 model: Category,
                 attributes: [ 'category_name' ]
             },
-            {
-                model: Tags,
-                attributes: [ 'tag_name' ]
-            }
+            // {
+            //     model: Tags,
+            //     attributes: [ 'tag_name' ]
+            // }
         ]
     } )
         .then( dbListingData =>

@@ -8,7 +8,9 @@ router.get('/', (req, res) => {
             'title',
             'description',
             'user_id',
-            'category_id'
+            'category_id',
+            'listing_date',
+            'updated_at'
         ],
         include: [
             {
@@ -38,7 +40,9 @@ router.get('/:id', (req, res) => {
             'title',
             'description',
             'user_id',
-            'category_id'
+            'category_id',
+            'listing_date',
+            'updated_at'
         ],
         include: [
             {
