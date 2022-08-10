@@ -15,31 +15,35 @@
     <nav class="navbar color1 is-fullwidth">
         <div class="tile justify-content-between pl-5 pr-5">
             <ul class="tile level is-family-monospace">
+                {{#if loggedIn}}
                 <li>
-                    <!--SIGNUP MODAL-->
-
-                    <div class="js-modal-trigger" data-target="signUpModal">
-                        <button id="signUp" class="button is-medium">
-                            <h3 class="has-text-weight-bold">Sign up!</h3>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <ul>
+                    <button id="logout" class="button is-black pb-3">
+                        <h3 class="has-text-weight-bold topNav">Logout</h3>
+                    </button> 
+                    </li>
+                {{else}}
                 <li>
                     <!--LOGIN MODAL -->
-
+                
                     <div class="js-modal-trigger" data-target="loginModal">
                         <button id="login" class="button is-black">
                             <h3 class="has-text-weight-bold topNav">Login</h3>
                         </button>
                     </div>
                 </li>
-                <li>
-                    <button id="logout" class="button is-black">
-                        <h3 class="has-text-weight-bold topNav">Logout</h3>
-                    </button </li>
             </ul>
+                <ul>
+                    <li>
+                        <!--SIGNUP MODAL-->
+                
+                        <div class="js-modal-trigger" data-target="signUpModal">
+                            <button id="signUp" class="button is-medium">
+                                <h3 class="has-text-weight-bold">Sign up!</h3>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                {{/if}}
         </div>
     </nav>
     <section class="hero is-light is-small">
@@ -63,7 +67,7 @@
                             <a href="/categories">Categories</a>
                         </li>
                         <li>
-                            <a href="/create-listing">Your Listings</a>
+                            <a href="/view-listings">Your Listings</a>
                         </li>
                     </ul>
                 </div>
@@ -124,7 +128,7 @@
         </div>
     </div>
 
-
+    <script src="/js/logout.js"></script>
     <script src="/js/login.js"></script>
     <script src="/js/new-user.js"></script>
     <script src="https://kit.fontawesome.com/2a0f064e00.js" crossorigin="anonymous"></script>
