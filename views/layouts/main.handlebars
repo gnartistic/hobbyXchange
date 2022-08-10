@@ -27,13 +27,18 @@
             </ul>
             <ul>
                 <li>
-                    <a class="has-text-weight-bold topNav is-size-5">Login</a>
+                    <!--LOGIN MODAL -->
+
+                    <div class="js-modal-trigger" data-target="loginModal">
+                        <button id="login" class="button is-black">
+                            <h3 class="has-text-weight-bold topNav is-size-5">Login</h3>
+                        </button>
+                    </div>
                 </li>
-                {{#if loggedIn}}
                 <li>
-                    <a class="has-text-weight-bold topNav is-size-5">Logout</a>
-                </li>
-                {{/if}}
+                    <button id="logout" class="button is-black">
+                        <a class="has-text-weight-bold topNav is-size-5">Logout</a>
+                    </button </li>
             </ul>
         </div>
     </nav>
@@ -70,7 +75,7 @@
     <main>
         {{{body}}}
     </main>
-    
+
     <!-- MODAL CONTENTS -->
 
     <!--signup-->
@@ -113,20 +118,36 @@
                         </div>
                     </div>
                     <div class="mt-6 has-test centered">
-                        <button class="button" id="formSubmit" type="submit">Submit</button>
+                        <button class="button signup-form" id="formSubmit" type="submit">Submit</button>
                     </div>
                 </form>
                 <div class="mt-5 pt-5">
                     <img src="/images/banner2.png">
                     <!-- <img src="/assets/images/My project-1 (1).png"> -->
                 </div>
-        
             </div>
         </div>
     </div>
-    <button id="modalClose" class="modal-close is-large" aria-label="close"></button>
+
+    <!--login modal-->
+    <div class="loginModal modal is-clipped">
+        <div class="modalBgLogin modal-background"></div>
+        <div class="modal-content has-background-light py-5 px-5">
+            <form class="tile justify-content-center login-form">
+                <div class="tile is-5 level is-vertical m-5">
+                    <label for="email-login">Email:</label>
+                    <input class="form-input" type="text" id="email-login" />
+                    <label for="password-login">Password:</label>
+                    <input class="form-input" type="password" id="password-login" /> 
+
+                    <button class="button m-5" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
     </div>
 
+
+    <script src="/js/login.js"></script>
     <script src="/js/new-user.js"></script>
     <script src="https://kit.fontawesome.com/2a0f064e00.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
