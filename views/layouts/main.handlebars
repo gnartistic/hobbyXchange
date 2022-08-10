@@ -26,6 +26,7 @@
                 </li>
             </ul>
             <ul>
+                {{#if loggedIn}}
                 <li>
                     <!--LOGIN MODAL -->
 
@@ -35,10 +36,14 @@
                         </button>
                     </div>
                 </li>
+                {{/if}}
+                {{#if loggedIn}}
                 <li>
                     <button id="logout" class="button is-black">
                         <a class="has-text-weight-bold topNav is-size-5">Logout</a>
-                    </button </li>
+                    </button> 
+                </li>
+                {{/if}}
             </ul>
         </div>
     </nav>
