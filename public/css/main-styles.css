@@ -28,3 +28,7 @@ section.Listings {
     display: flex;
     flex-wrap: wrap !important;
 }
+
+.lister { 
+    color: #c7b109 !important;
+}
