@@ -35,6 +35,8 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+
+
 router.get('/edit/:id', (req, res) => {
     Listing.findByPk(req.params.id, {
         attributes: [
@@ -54,6 +56,9 @@ router.get('/edit/:id', (req, res) => {
                     attributes: ['id', 'category_name']
             }
         ]
+    })
+    .then(dbListingData => {
+        
     })
     .catch(err => {
         console.log(err);
