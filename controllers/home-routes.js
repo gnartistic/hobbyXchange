@@ -2,9 +2,6 @@ const router = require( 'express' ).Router();
 const sequelize = require( '../config/connection' );
 const { Listing, User, Category } = require( '../models' );
 
-const withAuth = require('../utils/auth');
-const moment = require('moment')
-
 // get all Listings for homepage
 router.get( '/', ( req, res ) =>
 {
