@@ -4,6 +4,7 @@ const tinderContainers = document.querySelector('.tinder');
 const allCards = document.querySelector('.tinder--card');
 const nope = document.getElementById('nope');
 const love = document.getElementById('love');
+const random = document.querySelector('.hammer')
 
 function initCards(card, index) {
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -90,8 +91,13 @@ function createButtonListener(love) {
     };
 }
 
+function randomListener (event){
+    event.preventDefault;
+};
+
 var nopeListener = createButtonListener(false);
 var loveListener = createButtonListener(true);
 
+random.addEventListener('click', randomListeners)
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
