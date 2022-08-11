@@ -43,11 +43,10 @@ function signupFormHandler(event) {
             headers: { 'Content-Type': 'application/json'}
         });
         if (response.ok) {
-            document.location.replace( '/' );
             console.log( 'success!' );
-        } else {
-            alert( 'Failed to sign up.' );
         }
+        alert( 'Welcome!' );
+        document.location.replace( '/' );
     }
 }
 
