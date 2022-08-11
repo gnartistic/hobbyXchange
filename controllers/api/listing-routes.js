@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
             title: req.body.title,
             description: req.body.description,
             // change back to session instead of body once path confirmed working
-            user_id: req.body.user_id,
+            user_id: req.session.user_id,
             category_id: req.body.category_id
         })
         .then(dbListingData => res.json(dbListingData))
