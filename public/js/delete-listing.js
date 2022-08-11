@@ -9,10 +9,10 @@ async function deleteFormHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/user-listings');
+        document.location.replace('/dashboard');
     } else {
         alert(response.statusText);
     }
 }
 
-document.querySelector('#delete').addEventListener('click', deleteFormHandler);
+document.querySelector('.delete-listing-btn').addEventListener('click', deleteFormHandler);
