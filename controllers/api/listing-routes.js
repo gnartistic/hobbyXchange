@@ -72,7 +72,6 @@ router.post('/', (req, res) => {
         Listing.create({
             title: req.body.title,
             description: req.body.description,
-            // change back to session instead of body once path confirmed working
             user_id: req.session.user_id,
             category_id: req.body.category_id
         })

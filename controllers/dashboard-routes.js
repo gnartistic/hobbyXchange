@@ -47,7 +47,6 @@ async function getUserListings(dbListingData, userId, res) {
     }
 
     await res.render('user-listings', { listings, loggedIn: true });
-    // console.log(listings);
     return;
 }
 
@@ -66,10 +65,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
             'updated_at'
         ],
         include: [
-            // {
-            //     model: User,
-            //         attributes: ['id', 'username', 'email', 'name', 'wish_list']
-            // },
             {
                 model: Category,
                     attributes: ['id', 'category_name']
