@@ -1,4 +1,28 @@
-<link rel="stylesheet" href="../public/css/main-styles.css">
+<link rel="stylesheet" href="/css/main-styles.css">
+{{!-- <section class="hero is-light is-small">
+    <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+            <div class="container">
+                <ul class="is-family-monospace">
+                    <li class="tab is-active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="/categories">Categories</a>
+                    </li>
+                    {{#if loggedIn}}
+                    <li>
+                        <a href="/user-listings">Your Listings</a>
+                    </li>
+                    <li>
+                        <a href="/create-listing">Create Listing</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section> --}}
 <section class="Listings tile level p-5 flex">
     {{#each listings as |list|}}
     <div class="tile is-4 p-3 listing flex">

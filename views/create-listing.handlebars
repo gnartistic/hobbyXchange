@@ -1,37 +1,18 @@
-<div class="hero-foot">
-    <nav class="tabs is-boxed is-fullwidth">
-        <div class="container">
-            <ul class="is-family-monospace">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/assets/mockups/search.html">Search</a>
-                </li>
-                <li>
-                    <a href="/assets/mockups/catergories.html">Categories</a>
-                </li>
-                <li class="tab is-active">
-                    <a href="#">Create Listing</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+{{!-- <link rel="stylesheet" href="/css/main-styles.css"> --}}
 
 <section class="Listings p-5">
-        <div class="tile is-ancestor flex">
-            <div class="tile is-parent justify-content-center">
-                <div class="tile is-10 is-child notification">
-                    <form class="new-listing-form">
+    <div class="tile is-ancestor flex">
+        <div class="tile is-parent justify-content-center">
+            <div class="tile is-10 is-child notification">
+                <form class="new-listing-form">
                     <div class="tile is-12 justify-content-between">
                             <h2 class="title pb-5">Create Listing Example</h2>
                     </div>
                     <div class="tile is-vertical">
                     <h3 class="subtitle">Title</h3>
-                    <input class="mb-5" placeholder="Listing Title"></input>
+                    <input name="listing-title" class="mb-5" placeholder="Listing Title"></input>
                     <h3 class="subtitle pt-5">Description</h3>
-                    <textarea class="textarea mb-5   is-warning" placeholder="Description"></textarea>
+                    <textarea name="description" class="textarea mb-5   is-warning" placeholder="Description"></textarea>
                     <label for="categories"><h3 class="subtitle mt-5 mr-5">Category:</h3></label>
                     
                     <select class="mt-3" name="categories" id="categories">
@@ -45,13 +26,15 @@
                         <option value="outdoor">Outdoor</option>
                         <option value="tech">Tech</option>
                     </select>
-                    <h3 class="subtitle mt-5">Keywords</h3>
-                    <input class="mb-5" placeholder="Tags"></input>
+                    {{!-- <h3 class="subtitle mt-5">Keywords</h3>
+                    <input class="mb-5" placeholder="Tags"></input> --}}
                     <div class="tile pt-5 is-6">
                         <button class="button" type="submit">Submit</button>
                     </div>
-                    </div>
-                    </form>
-                </div>
+                </form>
             </div>
-    </section>
+        </div>
+    </div>
+</section>
+
+<script src="/js/new-listing"></script>
