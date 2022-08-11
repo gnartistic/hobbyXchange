@@ -1,8 +1,22 @@
-<div class="js-modal-trigger" data-target="listingModal">
+{{!-- <div class="js-modal-trigger" data-target="listingModal">
     <div id="listing" class="tile is-child notification">
         <p class="title">{{title}}</p>
         <p class="subtitle">{{description}}</p>
         <p class="subtitle">{{format_date listing_date}}</p>
+        <div>
+            <button id="edit" class="button is-white">Edit</button>
+        </div>
+    </div>
+</div> --}}
+
+<div class="js-modal-trigger" data-target="listingModal">
+    <div id="listing" class="tile is-child notification">
+        <p class="title">{{title}}</p>
+        <p class="subtitle">{{format_date listing_date}}</p>
+        <p class="subtitle">{{description}}</p>
+        <p class="lister subtitle is-size-5">Listed by: {{user.username}}</p>
+        <p class="subtitle">{{user.email}}</p>
+        <p class="subtitle">{{category.category_name}}</p>
         <div>
             <button id="edit" class="button is-white">Edit</button>
         </div>

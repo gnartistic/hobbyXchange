@@ -5,9 +5,6 @@ const { Category, User, Listing } = require('./../models');
 router.get('/', withAuth, (req, res) => {
     
     Listing.findAll({
-        where: {
-            id: req.session.user_id
-        },
         attributes: [
             'id',
             'title',
@@ -29,8 +26,15 @@ router.get('/', withAuth, (req, res) => {
         ]
     })
     .then(dbListingData => {
+        // console.log(dbListingData);
         const listings = dbListingData.map(listing => listing.get({ plain: true }));
-        res.render('user-listings', { listings, loggedIn: true });
+        // console.log(req.session.user_id, listings.length);
+        // for (let i = 0; i < listings.length; i ++) {
+        //     if (req.session.user_id === listings[i].user_id) {
+                console.log(listings);
+                res.render('user-listings', { listings, loggedIn: true });
+            // }
+        // }
     })
     .catch(err => {
         console.log(err);

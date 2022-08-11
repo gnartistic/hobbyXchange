@@ -3,6 +3,7 @@ const withAuth = require( '../utils/auth' );
 const { Category, User, Listing } = require('./../models');
 
 router.get('/', withAuth, (req, res) => {
+    console.log(req.session.user_id);
     Listing.findByPk(req.session.user_id, {
         attributes: [
             'id',
@@ -25,6 +26,7 @@ router.get('/', withAuth, (req, res) => {
         ]
     })
     .then(dbListingData => {
+        
         const listings = dbListingData.map(listing => listing.get({ plain: true }));
         res.render('create-listing', { listings, loggedIn: true });
     })
