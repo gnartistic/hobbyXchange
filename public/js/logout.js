@@ -5,9 +5,11 @@ async function logout() {
     });
 
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace( '/' );
+        alert( 'Logged out.' );
     } else {
-        alert(response.statusText);
+        alert( response.statusText );
+        alert( 'log out failed' );
     }
 }
 
