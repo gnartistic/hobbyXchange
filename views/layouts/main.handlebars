@@ -66,9 +66,14 @@
                         <li>
                             <a href="/categories">Categories</a>
                         </li>
+                        {{#if loggedIn}}
                         <li>
                             <a href="/view-listings">Your Listings</a>
                         </li>
+                        <li>
+                            <a href="/create-listing">Create Listing</a>
+                        </li>
+                        {{/if}}
                     </ul>
                 </div>
             </nav>
