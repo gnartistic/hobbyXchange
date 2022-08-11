@@ -56,19 +56,26 @@
                 </div>
             </nav>
         </div>
+    </section>
+    <section class="hero is-light is-small">
         <div class="hero-foot">
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul class="is-family-monospace">
                         <li class="tab is-active">
-                            <a href="#">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li>
                             <a href="/categories">Categories</a>
                         </li>
+                        {{#if loggedIn}}
                         <li>
                             <a href="/view-listings">Your Listings</a>
                         </li>
+                        <li>
+                            <a href="/create-listing">Create Listing</a>
+                        </li>
+                        {{/if}}
                     </ul>
                 </div>
             </nav>
@@ -128,8 +135,13 @@
         </div>
     </div>
 
-    <script src="/js/logout.js"></script>
+    
+    
+    <script src="/js/delete-listing.js"></script>
+    <script src="/js/edit-listing.js"></script>
+    
     <script src="/js/login.js"></script>
+    <script src="/js/logout.js"></script>
     <script src="/js/new-user.js"></script>
     <script src="https://kit.fontawesome.com/2a0f064e00.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

@@ -29,6 +29,10 @@ section.Listings {
     flex-wrap: wrap !important;
 }
 
+.lister { 
+    color: #c7b109 !important;
+}
+
 .center {
         margin-left: auto;
         margin-right: auto;
