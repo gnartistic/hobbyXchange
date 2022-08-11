@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="../public/css/main-styles.css">
+<link href="/public/css/style.css">
 <section class="Listings tile level p-5 flex">
-    {{#each listings as |list|}}
+    {{#each user.listing as |list|}}
     <div class="tile is-4 p-3 listing flex">
         {{>listing}}
     </div>
