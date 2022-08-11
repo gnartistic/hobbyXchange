@@ -27,14 +27,8 @@ router.get('/', withAuth, (req, res) => {
     })
     .then(dbListingData => {
         // console.log(dbListingData);
-        const listings = dbListingData.map(listing => listing.get({ plain: true }));
-        // console.log(req.session.user_id, listings.length);
-        // for (let i = 0; i < listings.length; i ++) {
-        //     if (req.session.user_id === listings[i].user_id) {
-                console.log(listings);
-                res.render('user-listings', { listings, loggedIn: true });
-            // }
-        // }
+        getUserListings(dbListingData, req.session.user_id, res);
+       
     })
     .catch(err => {
         console.log(err);
@@ -42,38 +36,55 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+async function getUserListings(dbListingData, userId, res) {
+    let listings = []
+    const userListings = dbListingData.map(listing => listing.get({ plain: true }));
+    for (let i = 0; i < userListings.length; i++) {
+        if (userId === userListings[i].user_id) {
+            let result = userListings[i];
+            listings.push(result);            
+        }
+    }
 
+    await res.render('user-listings', { listings, loggedIn: true });
+    // console.log(listings);
+    return;
+}
 
-// router.get('/:id', withAuth, (req, res) => {
-//     Listing.findByPk(req.session.user_id, {
-//         attributes: [
-//             'id',
-//             'title',
-//             'description',
-//             'user_id',
-//             'category_id',
-//             'listing_date',
-//             'updated_at'
-//         ],
-//         include: [
-//             {
-//                 model: User,
-//                     attributes: ['id', 'username', 'email', 'name', 'wish_list']
-//             },
-//             {
-//                 model: Category,
-//                     attributes: ['id', 'category_name']
-//             }
-//         ]
-//     })
-//     .then(dbListingData => {
-//         const listings = dbListingData.map(listing => listing.get({ plain: true }));
-//         res.render('user-listings', { listings, loggedIn: true });
-//     })
-//     .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//     });
-// });
+router.get('/edit/:id', withAuth, (req, res) => {
+    Listing.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'title',
+            'description',
+            'user_id',
+            'category_id',
+            'listing_date',
+            'updated_at'
+        ],
+        include: [
+            // {
+            //     model: User,
+            //         attributes: ['id', 'username', 'email', 'name', 'wish_list']
+            // },
+            {
+                model: Category,
+                    attributes: ['id', 'category_name']
+            }
+        ]
+    })
+    .then(dbListingData => {
+        const listings = dbListingData.get({ plain: true });
+        console.log(listings);
+        res.render('edit-listing', { listings, loggedIn: true });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;

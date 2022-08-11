@@ -4,7 +4,7 @@ const { Category, User, Listing } = require('./../models');
 
 router.get('/', withAuth, (req, res) => {
     console.log(req.session.user_id);
-    Listing.findByPk(req.session.user_id, {
+    Listing.findAll({
         attributes: [
             'id',
             'title',

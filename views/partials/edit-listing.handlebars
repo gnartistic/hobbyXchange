@@ -1,0 +1,43 @@
+<form class="edit-listing-form">
+    <div class="tile is-12 justify-content-between">
+        <h2 class="title pb-5">Edit Listing</h2>
+    </div>
+    <div class="tile is-vertical">
+    <h3 class="subtitle">Title</h3>
+    <input name="listing-title" class="mb-5" value="{{listings.title}}"></input>
+    <h3 class="subtitle pt-5">Description</h3>
+    <textarea name="description" class="textarea mb-5 is-warning">{{listings.description}}</textarea>
+    <label for="categories"><h3 class="subtitle mt-5 mr-5">Category:</h3></label>
+    
+    <select class="mt-3" name="categories" id="edit-categories">
+        <option value="misc">Other</option>
+        <option value="sports">Sports</option>
+        <option value="art">Art</option>
+        <option value="crafting">Crafting</option>
+        <option value="music">Music</option>
+        <option value="woodworking">Woodworking</option>
+        <option value="books">Books</option>
+        <option value="outdoor">Outdoor</option>
+        <option value="tech">Tech</option>
+    </select>
+    {{!-- <h3 class="subtitle mt-5">Keywords</h3>
+    <input class="mb-5" placeholder="Tags"></input> --}}
+    <div class="tile pt-5 is-6">
+        <button class="button" type="submit">Edit</button>
+    </div>
+</form>
+
+<div class="tile is-12 p-3 listing flex">
+    <div class="js-modal-trigger" data-target="listingModal">
+        <div id="listing" class="tile is-child notification">
+            <form class="delete-listing">
+                <p class="title">{{listings.title}}</p>
+                <p class="subtitle">{{format_date listings.listing_date}}</p>
+                <p class="subtitle">{{listings.description}}</p>
+                <p class="subtitle">{{listings.category.category_name}}</p>
+        
+                <button class="button is-black" type="click">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
