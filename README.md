@@ -1,38 +1,32 @@
-# Project 02 Requirements
+# hobbyXchange
 
-The group project must meet the following requirements:
+![Github licence](http://img.shields.io/badge/icense-MIT-blue.svg)
 
-* Use Node.js and Express.js to create a RESTful API.
+## Description
 
-* Use a template engine such as Handlebars.js.
+An application that encourages people who have hobbies or are interested in getting a new hobby to come and sell or buy supplies!
 
-* Use MySQL and the Sequelize ORM for the database.
+## Table of Contents
 
-* Have both GET and POST routes for retrieving and adding new data.
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-* Deploy using Heroku (with data).
+## Installation
 
-* Use at least one new library, package, or technology that we haven't discussed.
+No steps required, just click on our heroku link!
 
-* Have a polished UI.
+## Usage
 
-* Be responsive.
+You must first create a user. After you create a user, you log in and have the ability to search, create, and edit your personal listings. You also have the ability to select a randomize button that will send you random supplies for different hobbies if you are unsure of what hobby you like.
 
-* Be interactive (i.e., accept and respond to user input).
+## License
 
-* Must have a folder structure that meets the MVC paradigm.
+This project is licensed under MIT
 
-* Must include authentication (cookies and express-session).
+## Contributing
 
-* Must protect API keys and sensitive information with environment variables.
-
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-Finally, you must add your project to the portfolio that you created in Module 2.
-
-> **Note**: More details about the project are provided in the online lessons for Module 15.
-
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Charlie Houston, David Barnes, Yussel Panecatl

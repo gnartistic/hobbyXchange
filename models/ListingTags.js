@@ -1,9 +1,10 @@
 // const { Model, DataTypes } = require('sequelize');
 // const sequelize = require('../config/connection');
+// const Category = require('./Category');
 
-// class Tags extends Model {}
+// class ListingTags extends Model {}
 
-// Tags.init(
+// ListingTags.init(
 //     {
 //         id: {
 //             type: DataTypes.INTEGER,
@@ -11,8 +12,12 @@
 //             primaryKey: true,
 //             autoIncrement: true
 //         },
-//         tag_name: {
-//             type: DataTypes.STRING,
+//         listing_id: {
+//             type: DataTypes.INTEGER,
+//             allowNull: false
+//         },
+//         tag_id: {
+//             type: DataTypes.INTEGER,
 //             allowNull: false
 //         }
 //     },
@@ -21,8 +26,8 @@
 //         timestamps: false,
 //         freezeTableName: true,
 //         underscored: true,
-//         modelName: 'tags'
+//         modelName: 'listingTags'
 //     }
 // );
 
-// module.exports = Tags;
+// module.exports = Category;
