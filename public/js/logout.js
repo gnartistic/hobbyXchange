@@ -1,4 +1,20 @@
-async function logout() {
+// randomize modal
+const randomBtn = document.querySelector( '#randomize' );
+const randomizeModal = document.querySelector( '.randomizeModal' );
+const modalBgRandom = document.querySelector( '.modalBgRandom' );
+
+randomBtn.addEventListener( 'click', () =>
+{
+    randomizeModal.classList.add( 'is-active' );
+} );
+
+modalBgRandom.addEventListener( 'click', () =>
+{
+    randomizeModal.classList.remove( 'is-active' );
+} );
+
+async function logout ()
+{
     const response = await fetch('/api/users/logout', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' }

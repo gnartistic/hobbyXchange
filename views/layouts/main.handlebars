@@ -21,10 +21,10 @@
                         <h3 class="has-text-weight-bold topNav">Logout</h3>
                     </button> 
                     </li>
-
-                    <div>
-                        <button id="hammer" class="button is-black">
-                            <h3 class="has-text-weight-bold"> <a href="/hammer">Randomize!</a></h3>
+                    <!-- RANDOMIZE MODAL -->
+                    <div class="js-modal-trigger" data-target="randomizeModal">
+                        <button id="randomize" class="button is-black">
+                            <h3 class="has-text-weight-bold topNav">Randomize!</h3>
                         </button>
                     </div>
                     
@@ -140,6 +140,15 @@
         </div>
     </div>
 
+    <!-- Randomize modal content -->
+<div class="randomizeModal modal is-clipped">
+    <div class="modalBgRandom modal-background"></div>
+    <div class="modal-content has-background-light py-5 px-5">
+        {{> hammer}}
+    </div>
+</div>
+
+<script src="/js/hammer.js"></script>
     <script src="/js/logout.js"></script>
     <script src="/js/login.js"></script>
     <script src="/js/new-user.js"></script>
